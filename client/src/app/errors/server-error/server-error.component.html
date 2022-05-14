@@ -1,0 +1,18 @@
+<div class="container mt-5 mh-100" style = "height: 1080px">
+<h4>Internal Server Error - refreshing the page will make the error disapear! (don't do that if you don't want to lose the error)</h4>
+<ng-container *ngIf="error">
+    <h5 class = 'text-danger'>Error: {{error.message}}</h5>
+    <p class="font-weight-bold">If you are seeing this, Angular is probably not to blame</p>
+    <p>What to do next?</p>
+    <ol>
+        <li>Open the chrome cdev tools (right click -> inspect)</li>
+        <li>Check the failing request (should be highlighted in red)</li>
+        <li>Examine the request URL - make sure it is correct</li>
+        <li>Reproduce the error in Postman - if we see the same response, then the issue is not with Angular.</li>
+
+    </ol>
+    <p>The Following is the stack trace, this is whree your investigation should start!</p>
+    <code class="mt-5" style="background-color: black;">{{error.details}}</code>
+
+</ng-container>
+</div>
