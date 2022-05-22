@@ -32,5 +32,41 @@ namespace API.Data
 
             await context.SaveChangesAsync();
         }
+
+        public static async Task SeedPilot(DataContext context)
+        {
+            var pilotData = await System.IO.File.ReadAllTextAsync("Data/PilotSeedData.json");
+            var pilots = JsonSerializer.Deserialize<List<Pilot>>(pilotData);
+            
+            foreach(var pilot in pilots)
+            {
+                
+                context.Pilots.Add(pilot);
+            }
+
+            await context.SaveChangesAsync();
+        }
+
+/*
+        public static async Task SeedPilotCards(DataContext context)
+        {
+            var pilotCardData = await System.IO.File.ReadAllTextAsync("Data/PilotCardSeedData.json");
+            var pilotCardsIn = JsonSerializer.Deserialize<List<PilotCard>>(pilotCardData);
+
+            foreach(var pilotCard in pilotCardsIn)
+            {
+                pilotCard.Name = pilotCard.Name; //is this what we want?
+                pilotCard.
+
+            }
+
+
+            await context.SaveChangesAsync();
+        }
+        */
+
+
+
+
     }
 }

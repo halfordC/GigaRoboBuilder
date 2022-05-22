@@ -22,15 +22,7 @@ namespace API.Entities
         public string MainArtImage { get; set; }
         public string CooldownImage { get; set; }
         public string DiceImage { get; set; }
-        //public string DamageImage { get; set; }
         public string TypeImage { get; set; }
-        //public string CounterImage { get; set; }
-        //public string ComboImage { get; set; }
         public string LogoImage { get; set; }
-
-        /*
-        	
-
-        */
     }
 }

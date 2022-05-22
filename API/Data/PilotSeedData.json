@@ -1,0 +1,58 @@
+[
+  {
+    "Name": "Hadrian Corto",
+    "Heart": 6,
+    "Rage": 5,
+    "Power": 2,
+    "MaxFightingSpirit": 40,
+    "MainImage": ""
+  },
+  {
+    "Name": "Takashi Kato",
+    "Heart": 4,
+    "Rage": 8,
+    "Power": 3,
+    "MaxFightingSpirit": 25,
+    "MainImage": ""
+  },
+  {
+    "Name": "Noriko Nagare",
+    "Heart": 6,
+    "Rage": 6,
+    "Power": 2,
+    "MaxFightingSpirit": 30,
+    "MainImage": ""
+  },
+  {
+    "Name": "Dash",
+    "Heart": 10,
+    "Rage": 2,
+    "Power": 1,
+    "MaxFightingSpirit": 45,
+    "MainImage": ""
+  },
+  {
+    "Name": "Kong of the Wastes",
+    "Heart": 5,
+    "Rage": 5,
+    "Power": 1,
+    "MaxFightingSpirit": 20,
+    "MainImage": ""
+  },
+  {
+    "Name": "Med'racht Singh",
+    "Heart": -1,
+    "Rage": 8,
+    "Power": 2,
+    "MaxFightingSpirit": 25,
+    "MainImage": ""
+  },
+  {
+    "Name": "Terroch Arkan",
+    "Heart": 0,
+    "Rage": 5,
+    "Power": 3,
+    "MaxFightingSpirit": 20,
+    "MainImage": ""
+  }
+]

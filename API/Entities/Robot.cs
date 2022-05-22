@@ -14,6 +14,5 @@ namespace API.Entities
         public int Speed { get; set; }
         public int MaxArmour { get; set; }
         public int Defence { get; set; }
-
     }
 }
