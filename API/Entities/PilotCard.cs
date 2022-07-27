@@ -15,7 +15,7 @@ namespace API.Entities
         public string Type { get; set; }
         public int Cost { get; set; }
         public int Cooldown { get; set; }
-        public int MinRange { get; set; }
+        public int MinRange { get; set; } //for pilot cards, min/Max ranges of 0 indicate the infinate sign in the range slot 
         public int MaxRange { get; set; }
         public string Requirements { get; set; }
         public string Rules { get; set; }

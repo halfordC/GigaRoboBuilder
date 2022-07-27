@@ -21,6 +21,10 @@ import { ErrorInterceptor } from './_interceptors/error.interceptor';
 import { TestErrorsComponent } from './errors/test-errors/test-errors.component';
 import { NotFoundComponent } from './errors/not-found/not-found.component';
 import { ServerErrorComponent } from './errors/server-error/server-error.component';
+import { BuildMakerComponent } from './buildsComponenets/build-maker/build-maker.component';
+import { CardDisplayComponent } from './buildsComponenets/card-display/card-display.component';
+import { BuildDisplayComponent } from './buildsComponenets/build-display/build-display.component';
+import { BuildDisplayListComponent } from './buildsComponenets/build-display-list/build-display-list.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +38,11 @@ import { ServerErrorComponent } from './errors/server-error/server-error.compone
     MessagesComponent,
     TestErrorsComponent,
     NotFoundComponent,
-    ServerErrorComponent
+    ServerErrorComponent,
+    BuildMakerComponent,
+    CardDisplayComponent,
+    BuildDisplayComponent,
+    BuildDisplayListComponent
   ],
   imports: [
     BrowserModule,

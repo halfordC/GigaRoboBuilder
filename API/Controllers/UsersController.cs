@@ -23,8 +23,6 @@ namespace API.Controllers
         {
             _mapper = mapper;
             _userRepository = userRepository;
-            
-
         }
 
         [HttpGet]

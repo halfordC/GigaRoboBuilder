@@ -35,38 +35,94 @@ namespace API.Data
 
         public static async Task SeedPilot(DataContext context)
         {
+            if(await context.Pilots.AnyAsync()) return;
+
             var pilotData = await System.IO.File.ReadAllTextAsync("Data/PilotSeedData.json");
             var pilots = JsonSerializer.Deserialize<List<Pilot>>(pilotData);
             
             foreach(var pilot in pilots)
             {
-                
+
                 context.Pilots.Add(pilot);
             }
 
             await context.SaveChangesAsync();
         }
 
-/*
-        public static async Task SeedPilotCards(DataContext context)
+        public static async Task SeedRobots(DataContext context)
         {
-            var pilotCardData = await System.IO.File.ReadAllTextAsync("Data/PilotCardSeedData.json");
-            var pilotCardsIn = JsonSerializer.Deserialize<List<PilotCard>>(pilotCardData);
+            if(await context.Robots.AnyAsync()) return;
+            
+            var robotData = await System.IO.File.ReadAllTextAsync("Data/RobotSeedData.json");
+            var robots = JsonSerializer.Deserialize<List<Robot>>(robotData);
 
-            foreach(var pilotCard in pilotCardsIn)
+            foreach(var robot in robots)
             {
-                pilotCard.Name = pilotCard.Name; //is this what we want?
-                pilotCard.
+                context.Robots.Add(robot);
+            }
+            await context.SaveChangesAsync();
+        }
+
+        public static async Task SeedPilotAbilities(DataContext context)
+        {
+            if(await context.PilotAbilities.AnyAsync()) return;
+
+            var pAbilitiesData = await System.IO.File.ReadAllTextAsync("Data/PilotAbilitySeedData.json");
+            var pAbilities = JsonSerializer.Deserialize<List<PilotAbility>>(pAbilitiesData);
+
+            foreach(var pAbility in pAbilities)
+            {
+                context.PilotAbilities.Add(pAbility);
+            }
+            await context.SaveChangesAsync();
+        }
+
+        public static async Task SeedRobotAbilities(DataContext context)
+        {
+            if(await context.RobotAbilities.AnyAsync()) return;
+
+            var rAbilitiesData = await System.IO.File.ReadAllTextAsync("Data/RobotAbilitySeedData.json");
+            var rAbilities = JsonSerializer.Deserialize<List<RobotAbility>>(rAbilitiesData);
+
+            foreach(var rAbility in rAbilities)
+            {
+                context.RobotAbilities.Add(rAbility);
 
             }
+            await context.SaveChangesAsync();
 
+        }
+
+        public static async Task SeedPilotCards(DataContext context)
+        {
+            if(await context.PilotCards.AnyAsync()) return;
+
+            var pCardsData = await System.IO.File.ReadAllTextAsync("Data/PilotCardSeedData.json");
+            var pCards = JsonSerializer.Deserialize<List<PilotCard>>(pCardsData);
+
+            foreach(var pCard in pCards)
+            {
+                context.PilotCards.Add(pCard);
+            }
 
             await context.SaveChangesAsync();
         }
-        */
 
 
+        public static async Task SeedRobotCards(DataContext context)
+        {
+            if(await context.RobotCards.AnyAsync()) return;
 
+            var rCardData = await System.IO.File.ReadAllTextAsync("Data/RobotCardSeedData.json");
+            var rCardsIn = JsonSerializer.Deserialize<List<RobotCard>>(rCardData);
+
+            foreach(var rCard in rCardsIn)
+            {
+                context.RobotCards.Add(rCard);
+            }
+
+            await context.SaveChangesAsync();
+        }
 
     }
 }

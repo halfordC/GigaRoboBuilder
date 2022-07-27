@@ -25,8 +25,11 @@ namespace API
                 await context.Database.MigrateAsync();
                 await Seed.SeedUsers(context);
                 await Seed.SeedPilot(context);
-
-
+                await Seed.SeedRobots(context);
+                await Seed.SeedPilotAbilities(context);
+                await Seed.SeedRobotAbilities(context);
+                await Seed.SeedPilotCards(context);
+                await Seed.SeedRobotCards(context);
             }
             catch(Exception ex)
             {

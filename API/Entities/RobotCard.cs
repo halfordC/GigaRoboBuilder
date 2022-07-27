@@ -10,7 +10,7 @@ namespace API.Entities
     public class RobotCard
     {
         public int Id { get; set; }
-        public int RobotId { get; set; } //
+        public int RobotId { get; set; } 
         public string Name { get; set; }
         public int Cost { get; set; }
         public bool IsUltimate { get; set; }
@@ -18,6 +18,7 @@ namespace API.Entities
         public string SubType { get; set; }
         public int Cooldown { get; set; }
         public int BaseDamage { get; set; }
+        public string DamageString { get; set; }
         public int AttackDice { get; set; }
         public int MinRange { get; set; }
         public int MaxRange { get; set; }       
